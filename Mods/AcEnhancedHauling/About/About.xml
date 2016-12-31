@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Work Smarter</name>
+	<author>AlcoholV</author>
+	<url>https://ludeon.com/forums/index.php?topic=27331.0</url>
+	<targetVersion>0.15.1284</targetVersion>
+	<description>Make Colonists works smarter. 
+
+Now Colonists have common sense, so they grab everything as possible as they can and store to nearest storage depot before start working. Instead of haul one by one. If a stockpile is farther than working ground or the colonist is incapable of hauling, they work as normal. It Currently works only with cooking, constructing and some hauling job.
+</description>
+</ModMetaData>
