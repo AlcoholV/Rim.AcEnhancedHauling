@@ -54,7 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Mods\AcEnhancedHauling\About\About.xml" />
+    <Content Include="Mods\AcEnhancedHauling\About\About.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\AcEnhancedHauling\About\Preview.png" />
     <Content Include="Mods\AcEnhancedHauling\About\PublishedFileId.txt" />
     <Content Include="Mods\AcEnhancedHauling\Defs\WorkGiverDefs\WorkGivers.xml" />

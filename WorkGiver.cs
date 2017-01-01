@@ -47,8 +47,8 @@ namespace AlcoholV
             {
                 return null;
             }
-            var blueprintInstall = (Blueprint_Install) t;
-            if ((job.def != JobDefOf.HaulToContainer) || (blueprintInstall != null))
+
+            if ((job.def != JobDefOf.HaulToContainer) || !(t is Blueprint))
             {
                 return job;
             }
