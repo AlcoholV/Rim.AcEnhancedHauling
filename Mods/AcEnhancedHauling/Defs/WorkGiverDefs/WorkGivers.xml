@@ -1,38 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <WorkGivers>
-  <!-- ============= PatientEmergency ============= -->
-  <WorkGiverDef>
-    <defName>DoBillsMedicalHumanOperation</defName>
-    <label>operate on humanlikes</label>
-    <giverClass>AlcoholV.WorkGiver_DoBill</giverClass>
-    <workType>Doctor</workType>
-    <priorityInType>80</priorityInType>
-    <billGiversAllHumanlikes>true</billGiversAllHumanlikes>
-    <billGiversAllHumanlikesCorpses>true</billGiversAllHumanlikesCorpses>
-    <verb>operate</verb>
-    <gerund>operating on</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-    <prioritizeSustains>true</prioritizeSustains>
-  </WorkGiverDef>
-
-  <WorkGiverDef>
-    <defName>DoBillsMedicalAnimalOperation</defName>
-    <label>operate on animals</label>
-    <giverClass>AlcoholV.WorkGiver_DoBill</giverClass>
-    <workType>Doctor</workType>
-    <priorityInType>50</priorityInType>
-    <billGiversAllAnimals>true</billGiversAllAnimals>
-    <billGiversAllAnimalsCorpses>true</billGiversAllAnimalsCorpses>
-    <verb>operate</verb>
-    <gerund>operating on</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-    <prioritizeSustains>true</prioritizeSustains>
-  </WorkGiverDef>
-
   <!-- ============= Cooking ============= -->
 
   <WorkGiverDef>
