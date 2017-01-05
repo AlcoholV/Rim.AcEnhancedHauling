@@ -21,14 +21,14 @@ namespace AlcoholV
                 var thing = job.targetQueueB[i].Thing;
                 var storagePriority = HaulAIUtility.StoragePriorityAtFor(thing.Position, thing);
                 var itemCount = job.countQueue[i];
-                IntVec3 foundPos;
-                if (StoreUtility.TryFindBestBetterStoreCellFor(thing, p, thing.Map,storagePriority, p.Faction, out foundPos) && carryCapacity >= itemCount)
+                IntVec3 storePos;
+                if (StoreUtility.TryFindBestBetterStoreCellFor(thing, p, thing.Map,storagePriority, p.Faction, out storePos) && carryCapacity >= itemCount)
                 {
-                    var thingPos = thing.Position;
-                    var targetPos = job.targetA.Thing.Position;
-                    if ((targetPos - thingPos).LengthHorizontalSquared > (targetPos - foundPos).LengthHorizontalSquared)
+                    var targetPos = thing.Position;
+                    var destPos = job.targetA.Thing.Position;
+                    if ((targetPos - destPos).LengthHorizontalSquared > (targetPos - storePos).LengthHorizontalSquared)
                     {
-                        return HaulAIUtility.HaulMaxNumToCellJob(p, thing, foundPos, false);
+                        return HaulAIUtility.HaulMaxNumToCellJob(p, thing, storePos, false);
                     }
                 }
             }
@@ -47,17 +47,16 @@ namespace AlcoholV
             var storagePriority = HaulAIUtility.StoragePriorityAtFor(thing.Position, thing);
 
 
-            var foundPos = new IntVec3();
-            if (StoreUtility.TryFindBestBetterStoreCellFor(thing, p, thing.Map, storagePriority, p.Faction, out foundPos) && carryCapacity >= itemCount)
+            IntVec3 storePos;
+            if (StoreUtility.TryFindBestBetterStoreCellFor(thing, p, thing.Map, storagePriority, p.Faction, out storePos) && carryCapacity >= itemCount)
             {
 
-                var thingPos = thing.Position;
-                var targetPos = job.targetB.Thing.Position;
-                if ((targetPos - thingPos).LengthHorizontalSquared > (targetPos - foundPos).LengthHorizontalSquared)
+                var targetPos = thing.Position;
+                var destPos = job.targetB.Thing.Position;
+                if ((targetPos - destPos).LengthHorizontalSquared > (targetPos - storePos).LengthHorizontalSquared)
                 {
-                    return HaulAIUtility.HaulMaxNumToCellJob(p, thing, foundPos, false);
+                    return HaulAIUtility.HaulMaxNumToCellJob(p, thing, storePos, false);
                 }
-                return HaulAIUtility.HaulMaxNumToCellJob(p, thing, foundPos, false);
             }
 
             return job;
